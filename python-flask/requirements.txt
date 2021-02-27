@@ -1,9 +1,8 @@
-REQUIREMENTS:
-	1. numpy
-	2. pandas
-	3. pickle
-	4. matplotlib.pyplot
-	5. train_test_split
-	6. SMOTE
-	7. RandomForestClassifier
+numpy
+pandas
+pickle
+matplotlib.pyplot
+train_test_split
+SMOTE
+RandomForestClassifier
 	
