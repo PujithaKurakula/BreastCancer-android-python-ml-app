@@ -1,8 +1,10 @@
+flask
 numpy
 pandas
-pickle
-matplotlib.pyplot
-train_test_split
-SMOTE
-RandomForestClassifier
+matplotlib
+sklearn
+requests
+
+
+
 	
