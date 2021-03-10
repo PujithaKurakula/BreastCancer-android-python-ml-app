@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Breast Cancer Prediction"
+    android:gravity="center"
+    android:textColor="#5E1E5D"
+    android:textSize="20sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the value of tumor features"
+                android:textColor="#5E1E5D"
+                android:paddingTop="45dp"
+                android:paddingLeft="19dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Mean Texture"
+                android:id="@+id/mean_texture"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Mean Perimeter"
+                android:id="@+id/mean_perimeter"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Mean Smoothness"
+                android:id="@+id/mean_smoothness"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Mean Compactness"
+                android:inputType="numberDecimal"
+                android:id="@+id/mean_compactness"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Mean Concavity"
+                android:inputType="numberDecimal"
+                android:id="@+id/mean_concavity"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Mean concave points"
+                android:inputType="numberDecimal"
+                android:id="@+id/mean_concavepoints"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Mean Symmetry"
+                android:inputType="numberDecimal"
+                android:id="@+id/mean_symmetry"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Mean fractal dimension"
+                android:id="@+id/mean_fractaldimension"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Radius Error"
+                android:id="@+id/radius_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Texture Error"
+                android:id="@+id/texture_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Perimeter Error"
+                android:id="@+id/Perimeter_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Area Error"
+                android:id="@+id/area_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Smoothness error"
+                android:id="@+id/smoothness_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Compactness Error"
+                android:inputType="numberDecimal"
+                android:id="@+id/compactness_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Concavity Error"
+                android:inputType="numberDecimal"
+                android:id="@+id/concavity_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Concave points error"
+                android:id="@+id/concave_pointserror"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Symmetry error"
+                android:id="@+id/symmetry_error"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Fractal Dimesnion Error"
+                android:inputType="numberDecimal"
+                android:id="@+id/fractal_dimesnionerror"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Worst radius"
+                android:id="@+id/worst_radius"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Worst texture"
+                android:id="@+id/worst_texture"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Worst smoothness"
+                android:inputType="numberDecimal"
+                android:id="@+id/worst_smoothness"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Worst compactness"
+                android:inputType="numberDecimal"
+                android:id="@+id/worst_compactness"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:hint="Worst concavity"
+                android:id="@+id/worst_concavity"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Worst concave points"
+                android:inputType="numberDecimal"
+                android:id="@+id/worst_concavepoints"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Worst symmetry"
+                android:inputType="numberDecimal"
+                android:id="@+id/worst_symmetry"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Worst fractal dimesnion"
+                android:inputType="numberDecimal"
+                android:id="@+id/worst_fractaldimesnion"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Predict"
+                android:id="@+id/submit"
+                android:onClick="post"
+                android:textColor="#F8F2F2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

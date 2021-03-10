@@ -21,22 +21,66 @@ def riskpred():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    input_features = [float(x) for x in request.form.values()]
-    features_value = [np.array(input_features)]
+
+	meantexture=request.json['meantexture']
+	meanperimeter=request.json['meanperimeter']
+	meansmoothness=request.json['meansmoothness']
+	meancompactness=request.json['meancompactness']
+	meanconcavity=request.json['meanconcavity']
+	meanconcavepoints=request.json['meanconcavepoints']
+	meansymmetry=request.json['meansymmetry']
+	meanfractaldimension=request.json['meanfractaldimension']
+	radiuserror=request.json['radiuserror']
+	textureerror=request.json['textureerror']
+	perimetererror=request.json['perimetererror']
+	areaerror=request.json['areaerror']
+	smoothnesserror=request.json['smoothnesserror']
+	compactnesserror=request.json['compactnesserror']
+	concavityerror=request.json['concavityerror']
+	concavepointserror=request.json['concavepointserror']
+	symmetryerror=request.json['symmetryerror']
+	fractaldimensionerror=request.json['fractaldimensionerror']
+	worstradius=request.json['worstradius']
+	worsttexture=request.json['worsttexture']
+	worstsmoothness=request.json['worstsmoothness']
+	worstcompactness=request.json['worstcompactness']
+	worstconcavity=request.json['worstconcavity']
+	worstconcavepoints=request.json['worstconcavepoints']
+	worstsymmetry=request.json['worstsymmetry']
+	worstfractaldimension=request.json['worstfractaldimension']
+	
+	
+
     
-    features_name = ['mean radius', 'mean texture',
-       'mean smoothness', 'mean compactness', 'mean concavity',
-       'mean concave points', 'mean symmetry', 'mean fractal dimension',
-       'radius error', 'texture error', 'perimeter error', 'area error',
-       'smoothness error', 'compactness error', 'concavity error',
-       'concave points error', 'symmetry error', 'fractal dimension error',
-       'worst radius', 'worst texture','worst smoothness', 'worst compactness', 'worst concavity',
-       'worst concave points', 'worst symmetry', 'worst fractal dimension']
     
-    df = pd.DataFrame(features_value, columns=features_name)
-    output = model.predict(df)
+    datavalues = [[ meantexture,meansmoothness,meancompactness,meanconcavity,
+       meanconcavepoints,meansymmetry,meanfractaldimension,
+       radiuserror,textureerror,perimetererror,areaerror,
+       smoothnesserror,compactnesserror,concavityerror,
+       concavepointserror,symmetryerror,fractaldimensionerror,
+       worstradius,worsttexture,worstsmoothness,worstcompactness,worstconcavity,
+       worstconcavepoints,worstsymmetry,worstfractaldimension ]]
+	   
+	   
+	data=pd.dataframe(datavalues,columns=['meantexture',
+       'meansmoothness', 'meancompactness', 'meanconcavity',
+       'meanconcavepoints', 'meansymmetry', 'meanfractaldimension',
+       'radiuserror', 'textureerror', 'perimetererror', 'areaerror',
+       'smoothnesserror', 'compactnesserror', 'concavityerror',
+       'concavepointserror', 'symmetryerror', 'fractaldimensionerror',
+       'worstradius', 'worsttexture','worstsmoothness', 'worstcompactness', 'worstconcavity',
+       'worstconcavepoints', 'worstsymmetry', 'worstfractaldimension']
+    
+    
+    from sklearn.preprocessing import LabelEncoder
+    le=LabelEncoder()
+    for i in categorical_mod:
+        data[i] = le.fit_transform(data[i])
         
-    if output == 0:
+    res=model.predict(data)
+    return str(res[0])
+    
+    if output == '0':
         res_val = " breast cancer "
     else:
         res_val = "no breast cancer"
