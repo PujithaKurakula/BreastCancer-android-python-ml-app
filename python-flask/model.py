@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
-data=pd.read_csv("C:/Users/Primasolv/Desktop/3-2 minor project/BC mini project/breast_cancer_dataframe.csv")
+data=pd.read_csv("C:/Users/Lenovo/Desktop/BreastCancer-android-python-ml-app/python-flask/breast_cancer_dataframe.csv")
 print(data.columns)
 data=data.iloc[:,2:]
 print(data.columns)

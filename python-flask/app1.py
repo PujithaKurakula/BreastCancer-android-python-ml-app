@@ -1,8 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr  7 11:58:54 2021
+
+@author: Lenovo
+"""
+
 import numpy as np
 import pandas as pd
 from flask import Flask, request, render_template
 from sklearn.preprocessing import LabelEncoder
 import pickle
+
+
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
@@ -20,8 +29,12 @@ def riskpred():
 
 
 
+
+
+
 @app.route('/predict',methods=['POST'])
 def predict():
+
     meantexture=request.json['meantexture']
     meanperimeter=request.json['meanperimeter']
     meansmoothness=request.json['meansmoothness']
@@ -48,6 +61,7 @@ def predict():
     worstconcavepoints=request.json['worstconcavepoints']
     worstsymmetry=request.json['worstsymmetry']
     worstfractaldimension=request.json['worstfractaldimension']
+
     
     datavalues = [[ meantexture,meansmoothness,meancompactness,meanconcavity,
        meanconcavepoints,meansymmetry,meanfractaldimension,
@@ -58,20 +72,12 @@ def predict():
        worstconcavepoints,worstsymmetry,worstfractaldimension ]]
 	   
 	   
-    data=pd.dataframe(datavalues,columns=['meantexture','meansmoothness', 'meancompactness', 'meanconcavity','meanconcavepoints', 'meansymmetry', 'meanfractaldimension','radiuserror', 'textureerror', 'perimetererror', 'areaerror','smoothnesserror', 'compactnesserror', 'concavityerror','concavepointserror', 'symmetryerror', 'fractaldimensionerror','worstradius', 'worsttexture','worstsmoothness', 'worstcompactness', 'worstconcavity','worstconcavepoints', 'worstsymmetry', 'worstfractaldimension'])
-    
-        
-    res=model.predict(data)
-    output=res[0]
-    
-    if output == 0:
-        res_val = " breast cancer "
-    else:
-        res_val = "no breast cancer"
-        
+    data=pd.dataframe(datavalues,columns=['meantexture',
+       'meansmoothness', 'meancompactness', 'meanconcavity',
+       'meanconcavepoints', 'meansymmetry', 'meanfractaldimension',
+       'radiuserror', 'textureerror', 'perimetererror', 'areaerror',
+       'smoothnesserror', 'compactnesserror', 'concavityerror',
+       'concavepointserror', 'symmetryerror', 'fractaldimensionerror',
+       'worstradius', 'worsttexture','worstsmoothness', 'worstcompactness', 'worstconcavity',
+       'worstconcavepoints', 'worstsymmetry', 'worstfractaldimension']
 
-    return res_val
-
-if __name__ == "__main__":
-    app.run(debug=True)
-    
