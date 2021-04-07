@@ -4,6 +4,7 @@ pandas
 matplotlib
 sklearn
 requests
+imblearn
 
 
 
