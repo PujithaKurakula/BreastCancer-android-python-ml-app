@@ -49,7 +49,7 @@ def predict():
     worstsymmetry=request.json['worstsymmetry']
     worstfractaldimension=request.json['worstfractaldimension']
     
-    datavalues = [[ meantexture,meansmoothness,meancompactness,meanconcavity,
+    datavalues = [[ meantexture,meanperimeter,meansmoothness,meancompactness,meanconcavity,
        meanconcavepoints,meansymmetry,meanfractaldimension,
        radiuserror,textureerror,perimetererror,areaerror,
        smoothnesserror,compactnesserror,concavityerror,
@@ -58,7 +58,7 @@ def predict():
        worstconcavepoints,worstsymmetry,worstfractaldimension ]]
 	   
 	   
-    data=pd.dataframe(datavalues,columns=['meantexture','meansmoothness', 'meancompactness', 'meanconcavity','meanconcavepoints', 'meansymmetry', 'meanfractaldimension','radiuserror', 'textureerror', 'perimetererror', 'areaerror','smoothnesserror', 'compactnesserror', 'concavityerror','concavepointserror', 'symmetryerror', 'fractaldimensionerror','worstradius', 'worsttexture','worstsmoothness', 'worstcompactness', 'worstconcavity','worstconcavepoints', 'worstsymmetry', 'worstfractaldimension'])
+    data=pd.dataframe(datavalues,columns=['meantexture','meanperimeter','meansmoothness', 'meancompactness', 'meanconcavity','meanconcavepoints', 'meansymmetry', 'meanfractaldimension','radiuserror', 'textureerror', 'perimetererror', 'areaerror','smoothnesserror', 'compactnesserror', 'concavityerror','concavepointserror', 'symmetryerror', 'fractaldimensionerror','worstradius', 'worsttexture','worstsmoothness', 'worstcompactness', 'worstconcavity','worstconcavepoints', 'worstsymmetry', 'worstfractaldimension'])
     
         
     res=model.predict(data)
