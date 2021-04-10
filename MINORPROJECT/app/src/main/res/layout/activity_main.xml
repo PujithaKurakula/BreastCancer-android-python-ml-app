@@ -32,156 +32,156 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Mean Texture"
+                android:hint="Mean Texture val b/w 0 and 39"
                 android:id="@+id/mean_texture"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Mean Perimeter"
+                android:hint="Mean Perimeterval b/w 0 and 130"
                 android:id="@+id/mean_perimeter"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Mean Smoothness"
+                android:hint="Mean Smoothnes val b/w 0 and 3"
                 android:id="@+id/mean_smoothness"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Mean Compactness"
+                android:hint="Mean Compactness val b/w 0 and 3"
                 android:inputType="numberDecimal"
                 android:id="@+id/mean_compactness"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Mean Concavity"
+                android:hint="Mean Concavity val b/w 0 and 4"
                 android:inputType="numberDecimal"
                 android:id="@+id/mean_concavity"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Mean concave points"
+                android:hint="Mean concave points val b/w 0 and 4"
                 android:inputType="numberDecimal"
                 android:id="@+id/mean_concavepoints"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Mean Symmetry"
+                android:hint="Mean Symmetry val b/w 0 and 2"
                 android:inputType="numberDecimal"
                 android:id="@+id/mean_symmetry"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Mean fractal dimension"
+                android:hint="Mean fractal dimension val b/w 0 and 3"
                 android:id="@+id/mean_fractaldimension"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Radius Error"
+                android:hint="Radius Error val b/w 0 and 3"
                 android:id="@+id/radius_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Texture Error"
+                android:hint="Texture Error val b/w 0 and 5"
                 android:id="@+id/texture_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Perimeter Error"
+                android:hint="Perimeter Error val b/w 0 and 6"
                 android:id="@+id/Perimeter_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Area Error"
+                android:hint="Area Error val b/w 0 and 75"
                 android:id="@+id/area_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Smoothness error"
+                android:hint="Smoothness error val b/w 0 and 4"
                 android:id="@+id/smoothness_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Compactness Error"
+                android:hint="Compactness Error val b/w 0 and 2"
                 android:inputType="numberDecimal"
                 android:id="@+id/compactness_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Concavity Error"
+                android:hint="Concavity Error val b/w 0 and 3"
                 android:inputType="numberDecimal"
                 android:id="@+id/concavity_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Concave points error"
+                android:hint="Concave points error val b/w 0 and 5"
                 android:id="@+id/concave_pointserror"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Symmetry error"
+                android:hint="Symmetry error val b/w 0 and 6"
                 android:id="@+id/symmetry_error"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Fractal Dimesnion Error"
+                android:hint="Fractal Dimesnion Error val b/w 0 and 2"
                 android:inputType="numberDecimal"
                 android:id="@+id/fractal_dimesnionerror"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Worst radius"
+                android:hint="Worst radius val b/w 0 and 30"
                 android:id="@+id/worst_radius"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Worst texture"
+                android:hint="Worst texture val b/w 0 and 50"
                 android:id="@+id/worst_texture"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Worst smoothness"
+                android:hint="Worst smoothness val b/w 0 and 50"
                 android:inputType="numberDecimal"
                 android:id="@+id/worst_smoothness"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Worst compactness"
+                android:hint="Worst compactness val b/w 0 and 2"
                 android:inputType="numberDecimal"
                 android:id="@+id/worst_compactness"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:hint="Worst concavity"
+                android:hint="Worst concavity val b/w 0 and 2"
                 android:id="@+id/worst_concavity"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Worst concave points"
+                android:hint="Worst concave points val b/w 0 and 2"
                 android:inputType="numberDecimal"
                 android:id="@+id/worst_concavepoints"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Worst symmetry"
+                android:hint="Worst symmetry val b/w 0 and 3"
                 android:inputType="numberDecimal"
                 android:id="@+id/worst_symmetry"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:hint="Worst fractal dimesnion"
+                android:hint="Worst fractal dimesnion val b/w 0 and 2"
                 android:inputType="numberDecimal"
                 android:id="@+id/worst_fractaldimesnion"/>
             <Button
